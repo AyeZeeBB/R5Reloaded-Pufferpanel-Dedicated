@@ -14,7 +14,8 @@ To create the container, start it, and add the default user:
 ```
 mkdir -p /var/lib/pufferpanel
 docker volume create pufferpanel-config
-docker create --name pufferpanel -p 8080:8080 -p 5657:5657 -v pufferpanel-config:/etc/pufferpanel -v /var/lib/pufferpanel:/var/lib/pufferpanel --restart=on-failure pufferpanel/pufferpanel:latest
+docker create --name pufferpanel -p 8080:8080 -p 5657:5657 -p 37015-37020:37015-37020/tcp -p 37015-37020:37015-37020/udp -v pufferpanel-config:/etc/pufferpanel -v /var/lib/pufferpanel:/var/lib/pufferpanel --restart=on-failure pufferpanel/pufferpanel:latest
+pufferpanel/pufferpanel:latest
 docker start pufferpanel
 docker exec -it pufferpanel /pufferpanel/pufferpanel user add
 ```
