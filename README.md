@@ -2,7 +2,7 @@
 
 This tutorial will show you how to get pufferpanel up and running including adding the r5r dedi template to it.
 
-This was installed using Ubuntu 20.04.4 as the OS. <br>
+This was installed using Ubuntu 20.04 as the OS. <br>
 Others should work but have not tested them.
 
 ### Installing PufferPanel using Docker
