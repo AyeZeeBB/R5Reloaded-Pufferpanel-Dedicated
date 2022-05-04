@@ -67,8 +67,9 @@ Replace all the JSON shown with this json
         "unzip -o ./scripts_r5-S3_N1094.zip",
         "mv ./scripts_r5-S3_N1094/ ./platform/scripts/",
         "unzip -o ./DediFix.zip",
-        "rm -r ./platform/cfg/autoexec.cfg",
-        "touch ./platform/cfg/autoexec.cfg"
+        "rm -r ./startserver.sh",
+        "touch ./startserver.sh",
+        "chmod +x ./startserver.sh"
       ],
       "type": "command"
     },
@@ -84,6 +85,11 @@ Replace all the JSON shown with this json
         "rm -r ./scripts_r5-S3_N1094.zip"
       ],
       "type": "command"
+    },
+    {
+      "type": "writefile",
+      "target": "./startserver.sh",
+      "text": "#!/bin/sh\nWINEDEBUG=-all wine64 r5apex_ds.exe /nogui"
     }
   ],
   "run": {
